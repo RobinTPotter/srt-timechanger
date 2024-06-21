@@ -2,7 +2,16 @@
 
 Changes srt timestamps by offset and multiplier
 
-```python srt-changer.py Blood_Simple.srt 21.5 -m 0.96 -n
+# Usage
+
+```
+python srt-changer.py [-h] [-m MULTIPLIER] [-n] file offset
+```
+
+# Example
+
+```
+python srt-changer.py Blood_Simple.srt 21.5 -m 0.96 -n
 ```
 
 if the multiplier arg is given an offset is calculated

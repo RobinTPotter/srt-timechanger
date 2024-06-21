@@ -18,8 +18,10 @@ def change(t, sec, mil, mult=None, multoffset=None):
     and returns similar
     """
     tt = tc_to_datetime(t).timestamp()
-    tt = tt - multoffset
-    tt = tt*mult + multoffset
+    if mult:
+        tt = tt - multoffset
+        tt = tt*mult + multoffset
+    
     tt = datetime.datetime.fromtimestamp(tt)
     ntt=tt-datetime.timedelta(seconds=sec, microseconds=mil*1000)
     return datetime_to_tc(ntt)
@@ -35,8 +37,7 @@ if __name__=="__main__":
     parser.add_argument("-m", "--multiplier", type=float)
     parser.add_argument("-n", "--noaction", action="store_true")
     args = parser.parse_args()
-
-    print(args, file=sys.stderr)
+    #print(args, file=sys.stderr)
 
     print(f"file: {args.file}", file=sys.stderr)
     print(f"offset (negative): {args.offset}", file=sys.stderr)
