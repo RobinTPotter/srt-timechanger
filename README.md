@@ -2,6 +2,15 @@
 
 Changes srt timestamps by offset and multiplier
 
+# Install
+
+navigate to bin directory of choice
+
+```
+wget https://raw.githubusercontent.com/RobinTPotter/srt-timechanger/v1/srt-changer.py
+chmod +x srt-changer.py
+```
+
 # Usage
 
 ```
