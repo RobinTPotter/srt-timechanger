@@ -23,13 +23,14 @@ python srt-changer.py [-h] [-m MULTIPLIER] [-n] file offset
 python srt-changer.py Blood_Simple.srt 21.5 -m 0.96 -n
 ```
 
-if the multiplier arg is given an offset is calculated
+```-m``` : if the multiplier arg is given an offset is calculated
 based on the fist seen timestamp, this is removed prior
 to scaling then re-added.
 
-blurb appears in stderr and results are written to stdout
+```-n``` : flag is "no action", prints blurb and exits
 
--n flag is "no action", prints blurb and exits
+blurb appears in stderr and _results are written to stdout_
+
 
 Example blurb:
 
